@@ -1,6 +1,10 @@
 CORE FLIGHT TECHONOLOGIES A320 FCU driver for SPAD SERIAL V2
 
-Special Thanks To 1L2P (Discord 1L2P#5598)
+Special thanks to @1L2P (Discord ID: 1L2P#5598) for his excellent work!
+
+FCU communicates with SPAD.neXt via SerialV2. The Baud Rate is 115200
+
+How to install firmware -> https://github.com/coreflighttech/Uploader
 
 r01 Initial release:
  Internal devices features
@@ -11,3 +15,4 @@ r01 Initial release:
  - LCD isplay brightness level setting by pressing SPD MACH and turning VS encoder (not tested on my device)
  - Soft reset by pressing SPD MACH + APPR (not tested on my device, need to check APPR wiring)
  - SPAD Snippet for Fly By Wire A32NX #10242 (SPAD 0.9.15.24+)
+
