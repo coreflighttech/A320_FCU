@@ -1,0 +1,13 @@
+CORE FLIGHT TECHONOLOGIES A320 FCU driver for SPAD SERIAL V2
+
+Special Thanks To 1L2P (Discord 1L2P#5598)
+
+r01 Initial release:
+ Internal devices features
+ - Turn on/off backlight by pressing SPD MACH + METRIC ALT
+ - Turn on/off LCD display backlight by pressing SPD MACH + HDG VS TRK FPA (not tested on my device)
+ - Show info and firmware version by pressing SPD MACH + EXPED
+ - Backlight brightness level setting by pressing SPD MACH and turning ALT encoder
+ - LCD isplay brightness level setting by pressing SPD MACH and turning VS encoder (not tested on my device)
+ - Soft reset by pressing SPD MACH + APPR (not tested on my device, need to check APPR wiring)
+ - SPAD Snippet for Fly By Wire A32NX #10242 (SPAD 0.9.15.24+)
