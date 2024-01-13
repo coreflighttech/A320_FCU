@@ -9,7 +9,7 @@ How to install firmware -> https://github.com/coreflighttech/Uploader
 R01-007 update, mostly to fix LCD events rate. Updating the snippet #10242 is highly recommended.
 - r01-007 Cool down LCD events rate, Snippet #10242 updated
 
- CFU serial com has to be set at 115200 bauds in SPAD serial device settings (default bitrate)
+FCU serial com port has to be set at 115200 bauds in SPAD serial device settings (default bitrate)
 
 Special formats to be used in SPAD.neXt
  - Send ' ' spaces strings to clear SPD, HDG, ALT or VS digits
