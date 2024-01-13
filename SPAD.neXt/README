@@ -6,13 +6,26 @@ FCU communicates with SPAD.neXt via SerialV2. The Baud Rate is 115200
 
 How to install firmware -> https://github.com/coreflighttech/Uploader
 
-r01 Initial release:
- Internal devices features
- - Turn on/off backlight by pressing SPD MACH + METRIC ALT
- - Turn on/off LCD display backlight by pressing SPD MACH + HDG VS TRK FPA (not tested on my device)
- - Show info and firmware version by pressing SPD MACH + EXPED
- - Backlight brightness level setting by pressing SPD MACH and turning ALT encoder
- - LCD isplay brightness level setting by pressing SPD MACH and turning VS encoder (not tested on my device)
- - Soft reset by pressing SPD MACH + APPR (not tested on my device, need to check APPR wiring)
- - SPAD Snippet for Fly By Wire A32NX #10242 (SPAD 0.9.15.24+)
+R01-007 update, mostly to fix LCD events rate. Updating the snippet #10242 is highly recommended.
+- r01-007 Cool down LCD events rate, Snippet #10242 updated
 
+ CFU serial com has to be set at 115200 bauds in SPAD serial device settings (default bitrate)
+
+Special formats to be used in SPAD.neXt
+ - Send ' ' spaces strings to clear SPD, HDG, ALT or VS digits
+ - SPD mode values are 0 to 999 string formatted integers (###). Use '---' to display dashes.
+ - MACH mode value are 0.00 to 9.99 string formatted floats (#.##). Use '---' to display dashes.
+ - HDG values are 0 to 999 string formatted integers (###). Use '---' to display dashes.  
+ - VS values are -9999 to 9999 string formatted integers (#####). Use '-----' to display dashes.  
+ - FPA values are -9.9 to 9.9 string formatted floats (#.# or -#.#). Use '-----' to display dashes.
+ - Other chars strings can also be displayed but with well known 8 segments limitations.  
+
+ Internal devices features (not designed to be used when connected to SPAD)
+ - Turn on/off panel backlight by pressing SPD MACH + METRIC ALT
+ - Turn on/off LCD display backlight by pressing SPD MACH + HDG VS TRK FPA
+ - Show firmware version references by pressing SPD MACH + EXPED
+ - Panel backlight brightness level setting by pressing SPD MACH and turning ALT encoder (Better use DEVICE:1L2P/CFTA320FCU/DISPLAY_BRI var in SPAD when connected, 0 to 255 range)
+ - LCD display backlight brightness level setting by pressing SPD MACH and turning VS encoder (Better use DEVICE:1L2P/CFTA320FCU/BACKLIGHT_BRI var in SPAD when connected, 0 to 255 range)
+ - Soft reset by pressing SPD MACH + APPR (only use when not connected to SPAD, or just plug/unplug USB cable)
+
+ SPAD test snippet for Fly By Wire A32NX is #10242 (SPAD 0.9.15.27+)
