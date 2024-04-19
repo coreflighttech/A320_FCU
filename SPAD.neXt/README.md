@@ -2,14 +2,12 @@ CORE FLIGHT TECHONOLOGIES A320 FCU driver for SPAD SERIAL V2
 
 Special thanks to @1L2P (Discord ID: 1L2P#5598) for his excellent work!
 
-FCU communicates with SPAD.neXt via SerialV2. The Baud Rate is 115200
+FCU communicates with SPAD.neXt via SerialV2. The Baud Rate is 115200 (default SPAD serial device bitrate)
 
 How to install firmware -> https://github.com/coreflighttech/Uploader
 
-R01-007 update, mostly to fix LCD events rate. Updating the snippet #10242 is highly recommended.
-- r01-007 Cool down LCD events rate, Snippet #10242 updated
 
-FCU serial com port has to be set at 115200 bauds in SPAD serial device settings (default bitrate)
+*** R01-008 ***
 
 Special formats to be used in SPAD.neXt
  - Send ' ' spaces strings to clear SPD, HDG, ALT or VS digits
@@ -20,7 +18,7 @@ Special formats to be used in SPAD.neXt
  - FPA values are -9.9 to 9.9 string formatted floats (#.# or -#.#). Use '-----' to display dashes.
  - Other chars strings can also be displayed but with well known 8 segments limitations.  
 
- Internal devices features (not designed to be used when connected to SPAD)
+Internal devices features (not designed to be used when connected to SPAD)
  - Turn on/off panel backlight by pressing SPD MACH + METRIC ALT
  - Turn on/off LCD display backlight by pressing SPD MACH + HDG VS TRK FPA
  - Show firmware version references by pressing SPD MACH + EXPED
@@ -28,4 +26,17 @@ Special formats to be used in SPAD.neXt
  - LCD display backlight brightness level setting by pressing SPD MACH and turning VS encoder (Better use DEVICE:1L2P/CFTA320FCU/BACKLIGHT_BRI var in SPAD when connected, 0 to 255 range)
  - Soft reset by pressing SPD MACH + APPR (only use when not connected to SPAD, or just plug/unplug USB cable)
 
- SPAD test snippet for Fly By Wire A32NX is #10242 (SPAD 0.9.15.27+)
+To manage A320 FCU panel digits and backlight brightness from SPAD, search for these variables.
+ - DISPLAY_BRI : A320 FCU panel digits brightness from 0 to 255 (DEVICE:1L2P/CFTA320FCU/DISPLAY_BRI)
+ - BACKLIGHT_BRI : A320 FCU panel backlight brightness from 0 to 255 (DEVICE:1L2P/CFTA320FCU/BACKLIGHT_BRI)
+
+SPAD complete device test snippet for FlyByWire A32NX is <b>#10242</b> (SPAD 0.9.15.27+)
+SPAD complete device for Fenix A320 v2.0.0.392+ <b>#10859</b>
+
+*** History ***
+ - r01-003 Initial release
+ - r01-005 Backlight variables fix, SPAD GUI and LCD control improvements, Snippet FBW A32NX #10242 updated
+ - r01-006 SPAD GUI layout updated, Strings management added, Snippet FBW A32NX #10242 updated
+ - r01-007 Cool down LCD display events rate, Snippet FBW A32NX #10242 updated
+ - r01-008 Fix Altitude display overflow, Fenix A320 Snippet #10859 added
+
