@@ -35,7 +35,7 @@ SPAD complete device test snippet for FlyByWire A32NX is <b>#10242</b> (SPAD 0.9
 SPAD complete device for Fenix A320 v2.0.0.392+ <b>#10859</b>
 
 *** History ***
- - r01-003 Initial release
+ - r01-alpha Initial release
  - r01-005 Backlight variables fix, SPAD GUI and LCD control improvements, Snippet FBW A32NX #10242 updated
  - r01-006 SPAD GUI layout updated, Strings management added, Snippet FBW A32NX #10242 updated
  - r01-007 Cool down LCD display events rate, Snippet FBW A32NX #10242 updated
