@@ -31,6 +31,7 @@ To manage A320 FCU panel digits and backlight brightness from SPAD, search for t
  - BACKLIGHT_BRI : A320 FCU panel backlight brightness from 0 to 255 (DEVICE:1L2P/CFTA320FCU/BACKLIGHT_BRI)
 
 SPAD complete device test snippet for FlyByWire A32NX is <b>#10242</b> (SPAD 0.9.15.27+)
+
 SPAD complete device for Fenix A320 v2.0.0.392+ <b>#10859</b>
 
 *** History ***
