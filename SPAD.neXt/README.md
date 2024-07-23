@@ -2,12 +2,13 @@ CORE FLIGHT TECHONOLOGIES A320 FCU driver for SPAD SERIAL V2
 
 Special thanks to @1L2P (Discord ID: 1L2P#5598) for his excellent work!
 
+# 2024-07-23 R01-020 release for SPAD 0.9.18.4+ 
+
+CFT_A320_FCU_SPAD_1L2P_R01-020_115200.hex
+
+- Serial device init improvements
+
 FCU communicates with SPAD.neXt via SerialV2. The Baud Rate is 115200 (default SPAD serial device bitrate)
-
-How to install firmware -> https://github.com/coreflighttech/Uploader
-
-
-*** R01-008 ***
 
 Special formats to be used in SPAD.neXt
  - Send ' ' spaces strings to clear SPD, HDG, ALT or VS digits
@@ -34,7 +35,9 @@ SPAD complete device test snippet for FlyByWire A32NX is <b>#10242</b> (SPAD 0.9
 
 SPAD complete device for Fenix A320 v2.0.0.392+ <b>#10859</b>
 
-*** History ***
+How to install firmware -> https://github.com/coreflighttech/Uploader
+
+# Previous firmware
  - r01-alpha Initial release
  - r01-005 Backlight variables fix, SPAD GUI and LCD control improvements, Snippet FBW A32NX #10242 updated
  - r01-006 SPAD GUI layout updated, Strings management added, Snippet FBW A32NX #10242 updated
